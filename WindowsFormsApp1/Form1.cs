@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace WindowsFormsApp1
 {
@@ -17,9 +18,16 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("¡Hola, mundo!", "Hola");
+            if (checkBox1.Checked)
+            {
+                MessageBox.Show("El CheckBox está marcado.");
+            }
+            else
+            {
+                MessageBox.Show("El CheckBox no está marcado.");
+            }
         }
     }
 }
